@@ -376,7 +376,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/useHexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/hexo使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucio Lee">
@@ -395,7 +395,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/05/12/useHexo/" itemprop="url">useHexo</a></h1>
+                <a class="post-title-link" href="/2017/05/12/hexo使用/" itemprop="url">useHexo</a></h1>
         
 
         <div class="post-meta">
@@ -454,9 +454,26 @@
 <li>生成代码</li>
 <li>上传到Github Page</li>
 <li>更改主题</li>
-<li>新建文章</li>
-<li>删除文章</li>
+<li>新建文章<blockquote>
+<p>hexo new “文章名字”。这时候直接在source_posts中生成对应的md文件，直接编辑md文件。完成后generate,deploy</p>
+</blockquote>
+</li>
+<li>删除文章<blockquote>
+<p>直接删除source_posts下的文件的md文件，然后重新generate,deploy</p>
+</blockquote>
+</li>
 <li>新建categories</li>
+<li>Tag 404<blockquote>
+<ul>
+<li>hexo new page “tags” 在source中生成tags/index.html<ul>
+<li>修改index.html 中 type: “tags”</li>
+<li>theme中_config.yml中 menu中 设置tag tags: /tags</li>
+<li>hexo new post的时候可以指定tags</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
 <li>更新到Git<ul>
 <li>安装git deployer <blockquote>
 <p>npm install hexo-deployer-git –save</p>
